@@ -1,9 +1,11 @@
 # streaming_project_2
 
-1.How did changing values on the SparkSession property parameters affect the throughput and latency of the data?
+1.  How did changing values on the SparkSession property parameters affect the throughput and latency of the data?
 Answer: processedRowsperSecond -- it defines the throughput, and it should be more.
      Increasing the maxRatePerPartition increases the throughput and decreases latency while increasing processingTime does the opposite, in this case. As the processing time in this application should not be too high, as it processes the data quickly.
      We can also increase the kafka and spark partitions depending on the number of cores as they map one-to-one and it will increase parallelism and more records can be processed.
+
+
 
 2. What were the 2-3 most efficient SparkSession property key/value pairs? Through testing multiple variations on values, how can you tell these were the most optimal?
 Answer: The three most efficent SparkSession propertiy key/value pairs.
